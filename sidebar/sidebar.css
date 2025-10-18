@@ -1,5 +1,13 @@
 /* Importing Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root{
+  --sb-left-gap: 16px;          /* .sidebar margin-left */
+  --sb-width: 270px;            /* açık sidebar genişliği */
+  --sb-width-collapsed: 85px;   /* collapsed genişlik */
+  --content-gap: 10px;          /* sidebar ile içerik arası boşluk */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +20,7 @@ body {
 }
 .sidebar {
   position: fixed;
+  z-index: 9999;            /* her şeyin üstünde kalsın */
   width: 270px;
   margin: 16px;
   border-radius: 16px;
