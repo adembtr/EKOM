@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EKOM İNŞAAT</title>
+    <title>EKOM İNŞAAT – Yapılarımız</title>
+
+    <!-- Sıra önemli: önce built.css, sonra sidebar.css -->
+    <link rel="stylesheet" href="built.css" />
     <link rel="stylesheet" href="../sidebar/sidebar.css" />
-    <!-- Linking Google fonts for icons -->
+
+    <!-- Google Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
     />
   </head>
   <body>
+    <!-- SABİT SIDEBAR (mevcut komponentiniz) -->
     <aside class="sidebar">
-
-      <!-- Sidebar header -->
       <header class="sidebar-header">
         <a href="#" class="header-logo">
           <img src="../LOGO/EKOM.png" alt="Ekom" />
@@ -27,8 +29,8 @@
           <span class="material-symbols-rounded">menu</span>
         </button>
       </header>
+
       <nav class="sidebar-nav">
-        <!-- Primary top nav -->
         <ul class="nav-list primary-nav">
           <li class="nav-item">
             <a href="../index.html" class="nav-link">
@@ -39,9 +41,7 @@
           </li>
           <li class="nav-item">
             <a href="../nalbur/nalbur.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded"
-                >remove_shopping_cart</span
-              >
+              <span class="nav-icon material-symbols-rounded">remove_shopping_cart</span>
               <span class="nav-label">Nalbur</span>
             </a>
             <span class="nav-tooltip">Nalbur</span>
@@ -60,7 +60,6 @@
             </a>
             <span class="nav-tooltip">Ekibimiz</span>
           </li>
-
           <li class="nav-item">
             <a href="../location/location.html" class="nav-link">
               <span class="nav-icon material-symbols-rounded">location_on</span>
@@ -69,27 +68,116 @@
             <span class="nav-tooltip">Konum</span>
           </li>
         </ul>
-        <!-- Secondary bottom nav -->
+
         <ul class="nav-list secondary-nav">
           <li class="nav-item">
             <a href="../communication/communication.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded"
-                >phone_in_talk</span
-              >
+              <span class="nav-icon material-symbols-rounded">phone_in_talk</span>
               <span class="nav-label">İletişim</span>
             </a>
             <span class="nav-tooltip">İletişim</span>
           </li>
         </ul>
       </nav>
-
-     
-
     </aside>
-    
-   
 
-    <!-- Script -->
+
+    <!-- İÇERİK: sidebar'ın hemen komşusu -->
+    <div class="built">
+      <main class="page">
+        <section class="page-title">
+          <h1>Yapılarımız</h1>
+          <p>Seçme proje görselleri ve kısa açıklamalar.</p>
+        </section>
+
+        <!-- ▼▼ ALT ALTA PROJE BLOKLARI (her biri slider içerir) ▼▼ -->
+        <section class="projects vertical">
+          <!-- Proje 1 -->
+          <article class="project-block">
+            <header class="project-header">
+              <h3>Proje 1</h3>
+              <p>Konut – 2024</p>
+            </header>
+
+            <div class="slider" data-autoplay="true" data-interval="3000">
+              <div class="slides">
+                <!-- KENDİ FOTOĞRAFLARINI EKLE: src yollarını değiştir -->
+                <img src="../images/placeholder-1.jpg" alt="Proje 1 - Görsel 1" loading="lazy"/>
+                <img src="../images/placeholder-2.jpg" alt="Proje 1 - Görsel 2" loading="lazy"/>
+                <img src="../images/placeholder-3.jpg" alt="Proje 1 - Görsel 3" loading="lazy"/>
+              </div>
+              <button class="nav prev" aria-label="Önceki">
+                <span class="material-symbols-rounded">chevron_left</span>
+              </button>
+              <button class="nav next" aria-label="Sonraki">
+                <span class="material-symbols-rounded">chevron_right</span>
+              </button>
+              <div class="dots"></div>
+            </div>
+
+            <p class="project-desc">
+              Kısa açıklama: Projenin genel özellikleri ve öne çıkan noktalar.
+            </p>
+          </article>
+
+          <!-- Proje 2 -->
+          <article class="project-block">
+            <header class="project-header">
+              <h3>Proje 2</h3>
+              <p>Ticari – 2023</p>
+            </header>
+
+            <div class="slider" data-autoplay="true" data-interval="3000">
+              <div class="slides">
+                <img src="../images/placeholder-4.jpg" alt="Proje 2 - Görsel 1" loading="lazy"/>
+                <img src="../images/placeholder-5.jpg" alt="Proje 2 - Görsel 2" loading="lazy"/>
+                <img src="../images/placeholder-3.jpg" alt="Proje 2 - Görsel 3" loading="lazy"/>
+              </div>
+              <button class="nav prev" aria-label="Önceki">
+                <span class="material-symbols-rounded">chevron_left</span>
+              </button>
+              <button class="nav next" aria-label="Sonraki">
+                <span class="material-symbols-rounded">chevron_right</span>
+              </button>
+              <div class="dots"></div>
+            </div>
+
+            <p class="project-desc">
+              Kısa açıklama: Proje hakkında birkaç cümlelik tanıtım yazısı.
+            </p>
+          </article>
+
+          <!-- Proje 3 -->
+          <article class="project-block">
+            <header class="project-header">
+              <h3>Proje 3</h3>
+              <p>Karma – 2022</p>
+            </header>
+
+            <div class="slider" data-autoplay="true" data-interval="3000">
+              <div class="slides">
+                <img src="../images/placeholder-2.jpg" alt="Proje 3 - Görsel 1" loading="lazy"/>
+                <img src="../images/placeholder-1.jpg" alt="Proje 3 - Görsel 2" loading="lazy"/>
+                <img src="../images/placeholder-4.jpg" alt="Proje 3 - Görsel 3" loading="lazy"/>
+              </div>
+              <button class="nav prev" aria-label="Önceki">
+                <span class="material-symbols-rounded">chevron_left</span>
+              </button>
+              <button class="nav next" aria-label="Sonraki">
+                <span class="material-symbols-rounded">chevron_right</span>
+              </button>
+              <div class="dots"></div>
+            </div>
+
+            <p class="project-desc">
+              Kısa açıklama: Malzeme, metrekare, teslim yılı vb. bilgiler.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+
     <script src="../sidebar/sidebar.js"></script>
+    <script src="built.js"></script>
   </body>
 </html>

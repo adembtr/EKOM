@@ -1,17 +1,28 @@
-/* ====== SIDEBAR ENTEGRASYON ====== */
+/* ====== SIDEBAR ENTEGRASYON (projendeki değişkenlerle uyumlu) ====== */
 :root{
-  /* sidebar.css değerleriyle uyumlu */
   --sb-left-gap: 16px;          /* .sidebar margin-left */
   --sb-width: 270px;            /* açık genişlik */
   --sb-width-collapsed: 85px;   /* kapalı (collapsed) genişlik */
   --content-gap: 10px;          /* sidebar–içerik arası boşluk */
+
+  /* Tema dokunuşları */
+  --card-bg: #ffffff;
+  --page-bg: linear-gradient(#f1faff, #cbe4ff);
+  --accent: #f8b022;            /* buton/şerit rengi */
+  --accent-2: #ffd27a;          /* hafif vurgu */
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --ring: 0 5px 16px rgba(0,0,0,.08);
+  --ring-strong: 0 10px 28px rgba(0,0,0,.12);
 }
+
+html, body { background: var(--page-bg); }
 
 /* Sidebar hemen ardından gelen .location sağa kayar */
 .sidebar + .location{
   margin-left: calc(var(--sb-left-gap) + var(--sb-width) + var(--content-gap));
-  transition: margin-left 0.4s ease;     /* sidebar ile aynı hız */
-  padding-top: 16px;                      /* üstten güvenli boşluk */
+  transition: margin-left .35s ease;
+  padding: 20px 16px 64px;
 }
 
 /* Sidebar collapse olunca içerik daha az kayar */
@@ -19,120 +30,180 @@
   margin-left: calc(var(--sb-left-gap) + var(--sb-width-collapsed) + var(--content-gap));
 }
 
-/* Mobil: sidebar üstte menü şeridi gibi; soldan kaydırma yapma */
+/* Mobil: sidebar üstte şerit gibi; soldan kaydırma yapma */
 @media (max-width: 1024px){
-  .sidebar + .location{
-    margin-left: 0;
-    margin-top: calc(56px + var(--content-gap));  /* 56px mobil sidebar yüksekliği + 10px boşluk */
-    transition: margin 0.4s ease;
-  }
-}
-
-/* ====== SAYFANIN KENDİ STİLLERİ ====== */
-/* Contact */
-.Section__Map{
-  background: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 6rem 1rem;
-  flex-direction: column;
-}
-
-.form-control:focus{
-  box-shadow: 0 0 1rem rgba(255, 203, 90, 0.829);
-  border: 1px solid rgb(255, 166, 0);
-}
-
-.contact { background: var(--light-color); }
-
-.location-content{
-  background: var(--white-color);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px var(--shadow-color);
-  margin-bottom: 3rem;
-}
-
-/* ÖNEMLİ: 90vw taşma yapıyordu, ebeveyn genişliğine uydurduk */
-.map-container{
-  width: 100%;
-  max-width: 1100px;
-  height: 450px;
-  position: relative;
-}
-
-.map-container iframe{
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.location-info{
-  padding: 2rem;
-  background: var(--white-color);
-}
-
-.location-info h4{
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.location-info p{
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn{
-  background: rgb(250, 176, 39);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.884);
-  font-weight: 500;
-  transition: all 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn:hover{
-  transform: translateY(-2px);
-  background: rgb(255, 166, 0);
-  color: #fff;
-  box-shadow: 0 0 1rem rgba(255, 203, 90, 0.829);
-}
-
-.copy-location i{ font-size: 1.2rem; }
-
-.contact-form{
-  max-width: 800px;
-  margin: 0 auto;
-  background: var(--white-color);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-
-/* Mobilde sidebar tepede boşluksuz dursun (sidebar.css'i override eder) */
-@media (max-width: 1024px){
-  .sidebar{
-    position: fixed;
-    top: 10px;
-    left: 5px;
-    margin: 5px !important;             /* <-- kritik satır */
-    width: 100% !important;            /* üstte tam genişlik şerit */
-    border-radius: 0 0 16px 16px;      /* isteğe bağlı: üstte köşe yok */
-    z-index: 9999;                     /* her şeyin üstünde kalsın */
-  }
-
-  /* İçerik, mobil sidebar yüksekliği + 10px boşluk kadar aşağıdan başlasın */
   .sidebar + .location{
     margin-left: 0 !important;
-    margin-top: calc(56px + var(--content-gap, 10px)) !important;
+    margin-top: calc(0px + var(--content-gap));
+    transition: margin .35s ease;
+    padding: 12px 12px 56px;
   }
+}
+
+/* ====== SAYFA YAPI ve BÖLÜCÜLER ====== */
+.location{
+  counter-reset: loc;  /* Oto numaralama için */
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.Section__Map{
+  position: relative;
+  padding-block: 28px;
+}
+
+/* Bölümler arası net ayrım (çizgi + arka plan bandı) */
+.Section__Map:not(:last-of-type){
+  margin-bottom: 28px;
+}
+.Section__Map:not(:last-of-type)::after{
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 28px;
+  background:
+    linear-gradient(90deg, transparent, rgba(0,0,0,.08), transparent);
+}
+
+/* Başlık – numaralı rozet + alt başlık stili */
+.Section__Map > h4{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-weight: 700;
+  margin: 6px 6px 14px;
+  letter-spacing: .2px;
+}
+.Section__Map > h4::before{
+  counter-increment: loc;
+  content: counter(loc);
+  inline-size: 36px;
+  block-size: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #111;
+  font-weight: 800;
+  box-shadow: var(--ring);
+}
+
+/* ====== KART (harita + bilgi) ====== */
+.location-content{
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--ring);
+  overflow: hidden;
+  border: 1px solid rgba(17,24,39,.06);
+  /* üstte ince vurgu şeridi */
+  position: relative;
+  isolation: isolate;
+}
+.location-content::before{
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: .9;
+  z-index: 1;
+}
+
+/* Masaüstünde iki sütunlu düzen, mobilde dikey */
+@media (min-width: 900px){
+  .location-content{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    min-height: 420px;
+  }
+}
+
+/* Alternatif şeritli görünüm – bölümleri gözle ayırır */
+.Section__Map:nth-of-type(even) .location-content{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.85)),
+    radial-gradient(1200px 200px at 50% -50px, rgba(255,210,122,.12), transparent);
+}
+
+/* Harita alanı */
+.map-container{
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 46vw, 480px);
+}
+@media (min-width: 900px){
+  .map-container{ height: 100%; }
+}
+.map-container iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Bilgi paneli */
+.location-info{
+  padding: clamp(16px, 2.6vw, 28px);
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+.location-info h4{
+  color: var(--ink);
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  margin: 0 0 4px;
+}
+.location-info p{
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+
+/* Butonlar */
+.btn{
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #111;
+  font-weight: 700;
+  letter-spacing: .2px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: var(--ring);
+}
+.btn:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow: var(--ring-strong); }
+.btn:active{ transform: translateY(0); }
+
+/* İsteğe bağlı: iki buton yan yana geldiğinde aralık */
+.actions{ display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Kopyalandı durumunda minik geri bildirim */
+.copy-location.copied{
+  outline: 2px solid rgba(248,176,34,.45);
+  box-shadow: 0 0 0 8px rgba(248,176,34,.12);
+}
+
+/* ====== GİRİŞ ANİMASYONU (JS ile .in-view eklenecek) ====== */
+.animate-on-scroll{
+  opacity: 0;
+  transform: translateY(18px) scale(.995);
+  will-change: transform, opacity;
+  transition: opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.in-view{
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Küçük ekran optimizasyonları */
+@media (max-width: 540px){
+  .location-info{ padding: 14px; }
+  .btn{ padding: 9px 12px; border-radius: 10px; }
 }
