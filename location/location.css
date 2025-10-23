@@ -207,3 +207,60 @@ html, body { background: var(--page-bg); }
   .location-info{ padding: 14px; }
   .btn{ padding: 9px 12px; border-radius: 10px; }
 }
+
+
+/* location.css — sidebar üstte sabit, içerik altına oturur */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root{
+  --sb-left-gap: 16px;
+  --sb-width: 270px;
+  --sb-width-collapsed: 85px;
+  --content-gap: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#f1faff, #cbe4ff);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* içerik kısmı */
+.location {
+  margin-left: calc(var(--sb-width) + var(--content-gap));
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed + .location {
+  margin-left: calc(var(--sb-width-collapsed) + var(--content-gap));
+}
+
+@media (max-width: 1024px) {
+  .Section__Map{
+    margin-top: 20px;  
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .location {
+    margin-left: 0;
+    margin-top: calc(var(--sb-left-gap) + 10px);
+    z-index: 1;
+  }
+}
