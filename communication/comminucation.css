@@ -19,8 +19,8 @@
   max-width: 500px;
   border-radius: 50%;
   overflow: hidden;
-  background: #f7f9ff;
-  border: 2px solid #e6ecff;
+  background: #a6ff00;
+  border: 2px solid #cff7f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,12 +57,12 @@
 /* 🎨 input & textarea koyu temaya uygun hale getirildi */
 .form-group input,
 .form-group textarea {
-  border: 1.5px solid #3b3e5a;
+  border: 1.5px solid #00ddff;
   border-radius: 12px;
   padding: 16px 18px;
   font-size: 1rem;
   outline: none;
-  background: #1e1f33;
+  background: #000000;
   color: #fff;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -105,11 +105,11 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #1e1f33;
-  border: 1.5px solid #3b3e5a;
+  background: #000000;
+  border: 1.5px solid #15e0ff;
   border-radius: 12px;
   padding: 12px 16px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -117,8 +117,8 @@
 }
 
 .contact-item:hover {
-  background: #2a2c48;
-  border-color: #4f5272;
+  background:rgb(0, 213, 255);
+  border-color: #ff0606;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -144,9 +144,9 @@
 }
 
 .contact-text {
-  flex: 1;
-  font-weight: 500;
-  color: #fff;
+  flex: 3;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 /* === Masaüstü (>=1025px) === */
@@ -166,7 +166,7 @@
     width: 100%;
     min-height: 600px;
     margin: 16px auto 40px;
-    background: #151a2d;
+    background: #9afaff0b;
     color: #fff;
     border-radius: 20px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
@@ -198,7 +198,7 @@
     max-width: 580px;
     min-height: 500px;
     margin: 0 auto 40px;
-    background: #151a2d;
+    background: #8cf2f843;
     color: #fff;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -246,8 +246,8 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: #3a3d5a;
-  border: 1.5px solid #4b4f70;
+  background: #00d1fba7;
+  border: 1.5px solid #05fffb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +256,8 @@
 }
 
 .contact-item:hover .contact-icon-placeholder {
-  transform: scale(1.1);
+  transform: scale(3);
+  background-color: rgb(0, 213, 255);
 }
 
 .contact-icon-placeholder img,
