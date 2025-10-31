@@ -1,138 +1,766 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EKOM İNŞAAT</title>
 
   <!-- (değiştirmedim) -->
-  <link rel="stylesheet" href="sidebar/sidebar.css" />
-  <link rel="stylesheet" href="about_index/style.css" />
+  <link rel="stylesheet" href="app_bundle.css" />
+  <link rel="stylesheet" href="sidebar.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-  <aside class="sidebar">
-      <!-- Sidebar header -->
-      <header class="sidebar-header">
-        <a href="#" class="header-logo">
-          <img src="LOGO/EKOM.png" alt="Ekom" />
-        </a>
-        <button class="toggler sidebar-toggler">
-          <span class="material-symbols-rounded">chevron_left</span>
-        </button>
-        <button class="toggler menu-toggler">
-          <span class="material-symbols-rounded">menu</span>
-        </button>
-      </header>
-      <nav class="sidebar-nav">
-        <!-- Primary top nav -->
-        <ul class="nav-list primary-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded">menu</span>
-              <span class="nav-label">Hakkımızda</span>
-            </a>
-            <span class="nav-tooltip">Hakkımızda</span>
-          </li>
-          <li class="nav-item">
-            <a href="nalbur/nalbur.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded"
-                >remove_shopping_cart</span
-              >
-              <span class="nav-label">Nalbur</span>
-            </a>
-            <span class="nav-tooltip">Nalbur</span>
-          </li>
-          <li class="nav-item">
-            <a href="built/built.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded">home_work</span>
-              <span class="nav-label">Yapılarımız</span>
-            </a>
-            <span class="nav-tooltip">Yapılarımız</span>
-          </li>
-          <li class="nav-item">
-            <a href="team/team.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded">group</span>
-              <span class="nav-label">Ekibimiz</span>
-            </a>
-            <span class="nav-tooltip">Ekibimiz</span>
-          </li>
+  
+  <aside class="sidebar collapsed">
+    <!-- Sidebar header -->
+    <header class="sidebar-header">
+      <a href="#" class="header-logo">
+        <img src="LOGO/EKOM.png" alt="Ekom" />
+      </a>
+      <button class="toggler sidebar-toggler">
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <button class="toggler menu-toggler">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+    </header>
+    <nav class="sidebar-nav">
+      <!-- Primary top nav -->
+      <ul class="nav-list primary-nav">
+        <li class="nav-item">
+          <a href="#index" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">menu</span>
+            <span class="nav-label">Hakkımızda</span>
+          </a>
+          <span class="nav-tooltip">Hakkımızda</span>
+        </li>
+        <li class="nav-item">
+          <a href="#built" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">home_work</span>
+            <span class="nav-label">Yapılarımız</span>
+          </a>
+          <span class="nav-tooltip">Yapılarımız</span>
+        </li>
+        <li class="nav-item">
+          <a href="#team" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">group</span>
+            <span class="nav-label">Ekibimiz</span>
+          </a>
+          <span class="nav-tooltip">Ekibimiz</span>
+        </li>
+        <li class="nav-item">
+          <a href="#nalbur" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">remove_shopping_cart</span>
+            <span class="nav-label">Nalbur</span>
+          </a>
+          <span class="nav-tooltip">Nalbur</span>
+        </li>
 
-          <li class="nav-item">
-            <a href="location/location.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded">location_on</span>
-              <span class="nav-label">Konum</span>
-            </a>
-            <span class="nav-tooltip">Konum</span>
-          </li>
-        </ul>
-        <!-- Secondary bottom nav -->
-        <ul class="nav-list secondary-nav">
-          <li class="nav-item">
-            <a href="communication/communication.html" class="nav-link">
-              <span class="nav-icon material-symbols-rounded"
-                >phone_in_talk</span
-              >
-              <span class="nav-label">İletişim</span>
-            </a>
-            <span class="nav-tooltip">İletişim</span>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+        <li class="nav-item">
+          <a href="#location" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">location_on</span>
+            <span class="nav-label">Konum</span>
+          </a>
+          <span class="nav-tooltip">Konum</span>
+        </li>
 
-  <!-- İÇERİK -->
-  <main class="content">
+        <li class="nav-item">
+          <a href="#communucation" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">phone_in_talk</span>
+            <span class="nav-label">İletişim</span>
+          </a>
+          <span class="nav-tooltip">İletişim</span>
+        </li>
+
+        <li class="nav-toggle">
+          <div class="toogle_button">
+            <div class="setting_circle"></div>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="anaDiv">
+
+  <!-- İÇERİK İNDEX -->
+  <main class="content" id="index">
     <!-- MOBİL: NAVBAR ALTINA DİNAMİK BOŞLUK -->
     <!-- Slider -->
     <div class="slider">
       <div id="slides">
-        <div class="slide"><img src="about_index/photo/kCn908EOvVqZkvTMKKsoNa424ZpLIIDs.avif" alt="Proje görseli 1" /></div>
-            <div class="slide"><img src="about_index/photo/17276b_2a6ac25f16fd47b2b19644c82e76f841~mv2.avif" alt="Proje görseli 2" /></div>
-            <div class="slide"><img src="about_index/photo/about-us-main.webp" alt="Proje görseli 3" /></div>
-            <div class="slide"><img src="about_index/photo/construction-silhouette.webp" alt="Proje görseli 4" /></div>
-            <div class="slide"><img src="about_index/photo/types-of-building-construction-types-800x445.png" alt="Proje görseli 5" /></div>
+        <div class="slide"><img src="photo_about/FENER-KONAKLARINDA-KIRALIK-MUSTAKIL-42-LUKS-VILLA-32.webp" /></div>
+        <div class="slide"><img src="photo_about/hayallerinizin_de_otesinde_luks_bir_yasam_zeray_country_bahcecik_h117528_98b9b.webp" alt="Proje görseli 2" /></div>
+        <div class="slide"><img src="photo_about/modern-project-located-by-kucukcekmece19.jpg" alt="Proje görseli 3" /></div>
+        <div class="slide"><img src="photo_about/modern-project-located-by-kucukcekmece7.jpg" alt="Proje görseli 4" /></div>
+        <div class="slide"><img src="photo_about/ist-1146-triplex-villas-with-private-pools-near-the-beach-in-istanbul-ih-4.jpeg" alt="Proje görseli 5" /></div>
+        <div class="slide"><img src="photo_about/luks-konut-villa-820x492.jpg" alt="Proje görseli 5" /></div>
+        
       </div>
     </div>
 
     <section class="section">
       <h1>EKOM İnşaat’a Hoş Geldiniz</h1>
-       <p>
-          Güvenilir, şeffaf ve uzun ömürlü yapılar üretmek; bizim için yalnızca bir iş
-          değil, bir söz. EKOM İnşaat olarak her projeye, sanki kendi evimizi
-          inşa ediyormuşuz gibi özen gösteriyoruz. Zemin etütlerinden malzeme
-          seçimine, mimari detaylardan uygulama kalitesine kadar tüm adımları
-          dikkatle planlıyor, sahada titizlikle takip ediyoruz.
-        </p>
-        <p>
-          Projelerimizde estetik ile işlevsellik arasındaki dengeyi gözetirken,
-          kullanıcıların günlük yaşam alışkanlıklarını merkeze alıyoruz. Doğal
-          ışığı bol alan, verimli planlanmış ve bakım maliyeti düşük mekânlar
-          tasarlamak önceliğimiz. Enerji verimliliği, yalıtım performansı ve
-          dayanıklılık konularında güncel standartları yakalamakla yetinmiyor,
-          her fırsatta daha iyisini arıyoruz.
-        </p>
-        <p>
-          Saha ekibimiz, mimarlarımız ve mühendislerimizle tek bir takım gibi
-          çalışır; tedarikçilerimizi de aynı kalite anlayışıyla seçeriz. İş
-          güvenliğinden taviz vermeden, şantiye disiplinini ve iletişimi güçlü
-          tutarız. Teslim sonrası destek ve garanti süreçleriyle müşterilerimizin
-          yanındayız; çünkü asıl değer, anahtar teslim edildikten sonra ortaya
-          çıkar. Siz hayal edin; biz teknik çözümleri, bütçe dengesini ve zaman
-          planını sizin için netleştirelim.
-        </p>
-        <p>
-          İster konut, ister ticari bir yatırım planlıyor olun; doğru planlama
-          ve doğru uygulama ile sürdürülebilir bir katma değer oluşturmak mümkün.
-          EKOM İnşaat; sağlamlığı, estetiği ve müşteri memnuniyetini aynı potada
-          birleştiren bir üretim kültürüyle hareket ediyor. Bugün birlikte ilk
-          adımı atalım; projenizi güvenle geleceğe taşıyalım.
-        </p>
+      <p>
+        Güvenilir, şeffaf ve uzun ömürlü yapılar üretmek; bizim için yalnızca bir iş
+        değil, bir söz. EKOM İnşaat olarak her projeye, sanki kendi evimizi
+        inşa ediyormuşuz gibi özen gösteriyoruz. Zemin etütlerinden malzeme
+        seçimine, mimari detaylardan uygulama kalitesine kadar tüm adımları
+        dikkatle planlıyor, sahada titizlikle takip ediyoruz.
+      </p>
+      
     </section>
   </main>
 
-  <script src="sidebar/sidebar.js"></script>
-  <script src="about_index/main.js"></script>
+ <div class="divider">EKOM İNŞAAT</div>
+
+
+  <!-- İÇERİK BUİLT -->
+  <div class="built" id="built">
+    <main class="page">
+      <section class="page-title">
+        <h2>yapılarımız</h2>
+        <p>Seçme proje görselleri ve kısa açıklamalar.</p>
+      </section>
+
+      <!-- ▼▼ ALT ALTA PROJE BLOKLARI (her biri slider içerir) ▼▼ -->
+      <section class="projects vertical">
+        <!-- Proje 1 -->
+        <article class="project-block">
+          <header class="project-header">
+            <h3>Proje 1</h3>
+            <p>Konut – 2024</p>
+          </header>
+
+          <div class="slider" data-autoplay="true" data-interval="3000">
+            <div class="slides">
+              <!-- KENDİ FOTOĞRAFLARINI EKLE: src yollarını değiştir -->
+              <img src="../images/placeholder-1.jpg" alt="Proje 1 - Görsel 1" loading="lazy" />
+              <img src="../images/placeholder-2.jpg" alt="Proje 1 - Görsel 2" loading="lazy" />
+              <img src="../images/placeholder-3.jpg" alt="Proje 1 - Görsel 3" loading="lazy" />
+            </div>
+            <button class="nav prev" aria-label="Önceki">
+              <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+            <button class="nav next" aria-label="Sonraki">
+              <span class="material-symbols-rounded">chevron_right</span>
+            </button>
+            <div class="dots"></div>
+          </div>
+
+          <p class="project-desc">
+            Kısa açıklama: Projenin genel özellikleri ve öne çıkan noktalar.
+          </p>
+        </article>
+
+        <!-- Proje 2 -->
+        <article class="project-block">
+          <header class="project-header">
+            <h3>Proje 2</h3>
+            <p>Ticari – 2023</p>
+          </header>
+
+          <div class="slider" data-autoplay="true" data-interval="3000">
+            <div class="slides">
+              <img src="../images/placeholder-4.jpg" alt="Proje 2 - Görsel 1" loading="lazy" />
+              <img src="../images/placeholder-5.jpg" alt="Proje 2 - Görsel 2" loading="lazy" />
+              <img src="../images/placeholder-3.jpg" alt="Proje 2 - Görsel 3" loading="lazy" />
+            </div>
+            <button class="nav prev" aria-label="Önceki">
+              <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+            <button class="nav next" aria-label="Sonraki">
+              <span class="material-symbols-rounded">chevron_right</span>
+            </button>
+            <div class="dots"></div>
+          </div>
+
+          <p class="project-desc">
+            Kısa açıklama: Proje hakkında birkaç cümlelik tanıtım yazısı.
+          </p>
+        </article>
+
+        <!-- Proje 3 -->
+        <article class="project-block">
+          <header class="project-header">
+            <h3>Proje 3</h3>
+            <p>Karma – 2022</p>
+          </header>
+
+          <div class="slider" data-autoplay="true" data-interval="3000">
+            <div class="slides">
+              <img src="../images/placeholder-2.jpg" alt="Proje 3 - Görsel 1" loading="lazy" />
+              <img src="../images/placeholder-1.jpg" alt="Proje 3 - Görsel 2" loading="lazy" />
+              <img src="../images/placeholder-4.jpg" alt="Proje 3 - Görsel 3" loading="lazy" />
+            </div>
+            <button class="nav prev" aria-label="Önceki">
+              <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+            <button class="nav next" aria-label="Sonraki">
+              <span class="material-symbols-rounded">chevron_right</span>
+            </button>
+            <div class="dots"></div>
+          </div>
+
+          <p class="project-desc">
+            Kısa açıklama: Malzeme, metrekare, teslim yılı vb. bilgiler.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+ <div class="divider">EKOM İNŞAAT</div>
+
+
+  <!-- İÇERİK team -->
+  <main class="team" id="team">
+    <!-- BLOK 1 -->
+    <section class="team-block">
+      <h2 class="team-title">Mimari Ekip</h2>
+
+      <div class="slider" data-autoplay="true" data-interval="3000">
+        <div class="slides">
+          <div class="slide"><img src="https://picsum.photos/seed/arch1/1200/600" alt="Mimari 1" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/arch2/1200/600" alt="Mimari 2" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/arch3/1200/600" alt="Mimari 3" /></div>
+        </div>
+
+        <button class="nav prev" aria-label="Önceki">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="nav next" aria-label="Sonraki">
+          <span class="material-symbols-rounded">chevron_right</span>
+        </button>
+
+        <div class="dots"></div>
+      </div>
+
+      <div class="desc-box">
+        <p>
+          Proje tasarımı, konsept geliştirme ve görselleştirme süreçlerinden sorumlu ekibimiz.
+          Metinleri daha sonra güncelleyebilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOK 2 -->
+    <section class="team-block">
+      <h2 class="team-title">Saha & Uygulama</h2>
+
+      <div class="slider" data-autoplay="true" data-interval="3000">
+        <div class="slides">
+          <div class="slide"><img src="https://picsum.photos/seed/site1/1200/600" alt="Saha 1" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/sidebar-toggler/1200/600" alt="Saha 2" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/site3/1200/600" alt="Saha 3" /></div>
+        </div>
+
+        <button class="nav prev" aria-label="Önceki">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="nav next" aria-label="Sonraki">
+          <span class="material-symbols-rounded">chevron_right</span>
+        </button>
+
+        <div class="dots"></div>
+      </div>
+
+      <div class="desc-box">
+        <p>
+          Şantiye planlaması, kalite kontrol ve iş güvenliği süreçlerinin yürütülmesi.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOK 3 -->
+    <section class="team-block">
+      <h2 class="team-title">Satın Alma & Lojistik</h2>
+
+      <div class="slider" data-autoplay="true" data-interval="3000">
+        <div class="slides">
+          <div class="slide"><img src="https://picsum.photos/seed/site1/1200/600" alt="Lojistik 1" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/site1/1200/600" alt="Lojistik 2" /></div>
+          <div class="slide"><img src="https://picsum.photos/seed/site1/1200/600" alt="Lojistik 3" /></div>
+        </div>
+
+        <button class="nav prev" aria-label="Önceki">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="nav next" aria-label="Sonraki">
+          <span class="material-symbols-rounded">chevron_right</span>
+        </button>
+
+        <div class="dots"></div>
+      </div>
+
+      <div class="desc-box">
+        <p>
+          Malzeme tedariki, depolama ve sevkiyat planlaması gibi süreçlerden sorumludur.
+        </p>
+      </div>
+    </section>
+  </main>
+
+ <div class="divider">EKOM İNŞAAT</div>
+
+
+    <!-- İÇERİK nalbur -->
+  <div class="nalbur" id="nalbur">
+    <main class="page">
+      <!-- Üst Slider -->
+      <section class="hero-slider" aria-label="Öne çikan görseller">
+        <div class="slides">
+          <!-- 5 adet placeholder. Kendi dosyalarinla değiştireceksin -->
+          <img src="nalbur_photo/3k.webp" alt="Görsel 1" loading="lazy" />
+          <img src="nalbur_photo/orig.jpeg" alt="Görsel 2" loading="lazy" />
+          <img src="nalbur_photo/kosar-nalbur-2-1280x500.jpg" alt="Görsel 3" loading="lazy" />
+          <img src="nalbur_photo/kochan-nalbur-hirdavat.jpg" alt="Görsel 4" loading="lazy" />
+          <img src="nalbur_photo/92703b_bc2878b9706c4e73a105a6ccaf711a2c~mv2_d_4928_3264_s_4_2.avif" alt="Görsel 5" loading="lazy" />
+          <img src="nalbur_photo/tugra-makina-nalbur.png" alt="Görsel 1" loading="lazy" />
+
+
+        </div>
+      </section>
+
+      <!-- (İsteğe bağli) diğer sayfa içeriğin buraya gelecek -->
+    </main>
+    <!-- Slider alti kisa başlik -->
+    <section class="page-title">
+      <h1>EKOM İNŞAAT NALBUR</h1>
+      <p>Kalite, güven ve tecrübenin buluştuğu yer.</p>
+    </section>
+    <!-- Malzeme Kutusu (scrollbar'li büyük kutu) -->
+    <section class="materials" aria-label="Ürünler">
+      <div class="materials-grid">
+        <!-- 20 adet placeholder ürün -->
+        <article class="material-card">
+          <img src="ürün/1809841435889889.jpg" alt="Ürün 1" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 1</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/2017519172126.jpg" alt="Ürün 2" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 2</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/225paraekoelaletiseti21eitdolutakmantas16-1.avif" alt="Ürün 3" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 3</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/2735.png" alt="Ürün 4" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 4</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/6.jpg" alt="Ürün 5" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 5</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/b9fa9e05751a68e4e1cfa2239cc84941.jpg" alt="Ürün 6" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 6</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/bosch-page.jpg" alt="Ürün 7" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 7</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/c_6677999a42c16.webp" alt="Ürün 8" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 8</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/ekran-goruntusu-2024-07-01-110732.webp" alt="Ürün 9" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 9</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/El-Aletleri-ile-Herkes-Isin-Ustasi-c9ce.jpg" alt="Ürün 10" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 10</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/hirdavat.jpg" alt="Ürün 11" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 11</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/i.webp" alt="Ürün 12" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 12</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/kosar-nalbur-2-1280x500.jpg" alt="Ürün 13" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 13</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/Nalbur-Dukkani-Acmak-2.webp" alt="Ürün 14" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 14</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/silikon-cesitleri-900x900.jpg" alt="Ürün 15" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 15</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/title-260d5c94-e.webp" alt="Ürün 16" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 16</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+
+        <article class="material-card">
+          <img src="ürün/WC8P49WA.jpg" alt="Ürün 17" loading="lazy" />
+          <div class="info">
+            <h3 class="name">Ürün 17</h3>
+            <p class="desc">Kisa açiklama metni burada yer alir.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Konuma Git Butonu -->
+    <div class="location-button">
+      <a href="https://maps.app.goo.gl/zD9ezC8JyhgLiGM5A" target="_blank">
+        <span class="material-symbols-rounded">location_on</span>
+        <span>Konuma Git</span>
+      </a>
+    </div>
+
+
+  </div>
+
+ <div class="divider">EKOM İNŞAAT</div>
+
+
+ <!-- İÇERİK location -->
+  <div class="location" id="location">
+    <section class="Section__Map">
+      <h4>Title</h4>
+      <div class="location-content animate-on-scroll mb-5">
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12505.355563628865!2d30.016471!3d40.7328764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5b67bad61fc7%3A0xee5549a5ca265b3a!2sEkom%20Yap%C4%B1%20Malzemeleri%20%C4%B0n%C5%9Faat!5e0!3m2!1str!2str!4v1685282100000!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="location-info text-center mt-4">
+          <h4>Adresimiz</h4>
+          <p class="mb-3">Fatih Sultan Mehmet, Nazım Demirci Cd., 41250 Kartepe/Kocaeli</p>
+          <button class="btn copy-location" data-location="https://maps.app.goo.gl/ShEXQ4JCDoZXsEGWA">
+            <i class="bi bi-clipboard"></i> Konumu Kopyala
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section__Map">
+      <h4>Title</h4>
+      <div class="location-content animate-on-scroll mb-5">
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12505.355563628865!2d30.016471!3d40.7328764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5b67bad61fc7%3A0xee5549a5ca265b3a!2sEkom%20Yap%C4%B1%20Malzemeleri%20%C4%B0n%C5%9Faat!5e0!3m2!1str!2str!4v1685282100000!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="location-info text-center mt-4">
+          <h4>Adresimiz</h4>
+          <p class="mb-3">Fatih Sultan Mehmet, Nazım Demirci Cd., 41250 Kartepe/Kocaeli</p>
+          <button class="btn copy-location" data-location="https://maps.app.goo.gl/ShEXQ4JCDoZXsEGWA">
+            <i class="bi bi-clipboard"></i> Konumu Kopyala
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section__Map">
+      <h4>Title</h4>
+      <div class="location-content animate-on-scroll mb-5">
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12505.355563628865!2d30.016471!3d40.7328764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5b67bad61fc7%3A0xee5549a5ca265b3a!2sEkom%20Yap%C4%B1%20Malzemeleri%20%C4%B0n%C5%9Faat!5e0!3m2!1str!2str!4v1685282100000!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="location-info text-center mt-4">
+          <h4>Adresimiz</h4>
+          <p class="mb-3">Fatih Sultan Mehmet, Nazım Demirci Cd., 41250 Kartepe/Kocaeli</p>
+          <button class="btn copy-location" data-location="https://maps.app.goo.gl/ShEXQ4JCDoZXsEGWA">
+            <i class="bi bi-clipboard"></i> Konumu Kopyala
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section__Map">
+      <h4>Title</h4>
+      <div class="location-content animate-on-scroll mb-5">
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12505.355563628865!2d30.016471!3d40.7328764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5b67bad61fc7%3A0xee5549a5ca265b3a!2sEkom%20Yap%C4%B1%20Malzemeleri%20%C4%B0n%C5%9Faat!5e0!3m2!1str!2str!4v1685282100000!5m2!1str!2str"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <div class="location-info text-center mt-4">
+          <h4>Adresimiz</h4>
+          <p class="mb-3">Fatih Sultan Mehmet, Nazım Demirci Cd., 41250 Kartepe/Kocaeli</p>
+          <button class="btn copy-location" data-location="https://maps.app.goo.gl/ShEXQ4JCDoZXsEGWA">
+            <i class="bi bi-clipboard"></i> Konumu Kopyala
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+
+ <div class="divider">EKOM İNŞAAT</div>
+
+
+   <!-- İÇERİK communucation -->
+  <div id="communucation">
+    
+  <main class="icerik-kapsayici">
+    <div class="icerik-alani">
+      <form class="icerik-form" id="icerikForm" autocomplete="off">
+        <!-- 🔵 Daire görsel -->
+        <div class="image-column">
+          <div class="image-circle">
+            <img src="logo_communucation/download.jpg" alt="Proje görseli" />
+          </div>
+        </div>
+
+        <!-- 🔤 Metin alanları -->
+        <div class="fields-column">
+          <div class="form-group">
+            <label for="nameInput"></label>
+            <!-- ✅ readonly -->
+            <input id="nameInput" type="text" value="BATUHAN ÖZKAN (EKOM İNŞAAT ÇAYCI ADAYI)" readonly
+              aria-readonly="true" />
+          </div>
+          <!-- hazırlayan batuhan özkan-->
+          <div class="form-group">
+            <label for="descInput"></label>
+            <!-- ✅ readonly -->
+            <textarea id="descInput" rows="6" readonly
+              aria-readonly="true">Ekom İnşaat olarak 20 yılı aşkın süredir güven, kalite ve estetiği bir arada sunuyoruz.</textarea>
+          </div>
+
+          <!-- 📞 İletişim kutuları -->
+          <div class="contact-boxes">
+            <!-- Telefon (mobilde arama uygulamasını açar) -->
+            <a class="contact-item" href="tel:+905511225039">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/telefon.ico" alt="Telefon" />
+              </div>
+              <span class="contact-text">+90 551 122 50 39</span>
+            </a>
+
+            <!-- WhatsApp: Uygulama → olmazsa web -->
+            <a id="waLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/whatsap.ico" alt="WhatsApp" />
+              </div>
+              <span class="contact-text">WhatsApp’a git</span>
+            </a>
+            <!-- hazırlayan batuhan özkan-->
+            <!-- Instagram: Uygulama → olmazsa web -->
+            <a id="igLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/instegram (1).ico" alt="Instagram" />
+              </div>
+              <span class="contact-text">@batuhanozkan.38</span>
+            </a>
+          </div>
+        </div>
+      </form>
+      <!-- hazırlayan batuhan özkan-->
+    </div>
+  </main>
+
+  <main class="icerik-kapsayici">
+    <div class="icerik-alani">
+      <form class="icerik-form" id="icerikForm" autocomplete="off">
+        <!-- 🔵 Daire görsel -->
+        <div class="image-column">
+          <div class="image-circle">
+            <img src="logo_communucation/image_870x_66eb32be518d3.jpg" alt="Proje görseli" />
+          </div>
+        </div>
+
+        <!-- 🔤 Metin alanları -->
+        <div class="fields-column">
+          <div class="form-group">
+            <label for="nameInput"></label>
+            <!-- ✅ readonly -->
+            <input id="nameInput" type="text" value="BATUHAN ÖZKAN (EKOM İNŞAAT ÇAYCI ADAYI)" readonly
+              aria-readonly="true" />
+          </div>
+
+          <div class="form-group">
+            <label for="descInput"></label>
+            <!-- ✅ readonly -->
+            <textarea id="descInput" rows="6" readonly
+              aria-readonly="true">Ekom İnşaat olarak 20 yılı aşkın süredir güven, kalite ve estetiği bir arada sunuyoruz.</textarea>
+          </div>
+
+          <!-- 📞 İletişim kutuları -->
+          <div class="contact-boxes">
+            <!-- Telefon (mobilde arama uygulamasını açar) -->
+            <a class="contact-item" href="tel:+905511225039">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/telefon.ico" alt="Telefon" />
+              </div>
+              <span class="contact-text">+90 551 122 50 39</span>
+            </a>
+
+            <!-- WhatsApp: Uygulama → olmazsa web -->
+            <a id="waLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/whatsap.ico" alt="WhatsApp" />
+              </div>
+              <span class="contact-text">WhatsApp’a git</span>
+            </a>
+
+            <!-- Instagram: Uygulama → olmazsa web -->
+            <a id="igLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/instegram (1).ico" alt="Instagram" />
+              </div>
+              <span class="contact-text">@batuhanozkan.38</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <main class="icerik-kapsayici">
+    <div class="icerik-alani">
+      <form class="icerik-form" id="icerikForm" autocomplete="off">
+        <!-- 🔵 Daire görsel -->
+        <div class="image-column">
+          <div class="image-circle">
+            <img src="logo_communucation/images.jpg" alt="Proje görseli" />
+          </div>
+        </div>
+
+        <!-- 🔤 Metin alanları -->
+        <div class="fields-column">
+          <div class="form-group">
+            <label for="nameInput"></label>
+            <!-- ✅ readonly -->
+            <input id="nameInput" type="text" value="BATUHAN ÖZKAN (EKOM İNŞAAT ÇAYCI ADAYI)" readonly
+              aria-readonly="true" />
+          </div>
+
+          <div class="form-group">
+            <label for="descInput"></label>
+            <!-- ✅ readonly -->
+            <textarea id="descInput" rows="6" readonly
+              aria-readonly="true">Ekom İnşaat olarak 20 yılı aşkın süredir güven, kalite ve estetiği bir arada sunuyoruz.</textarea>
+          </div>
+
+          <!-- 📞 İletişim kutuları -->
+          <div class="contact-boxes">
+            <!-- Telefon (mobilde arama uygulamasını açar) -->
+            <a class="contact-item" href="tel:+905511225039">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/telefon.ico" alt="Telefon" />
+              </div>
+              <span class="contact-text">+90 551 122 50 39</span>
+            </a>
+
+            <!-- WhatsApp: Uygulama → olmazsa web -->
+            <a id="waLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/whatsap.ico" alt="WhatsApp" />
+              </div>
+              <span class="contact-text">WhatsApp’a git</span>
+            </a>
+
+            <!-- Instagram: Uygulama → olmazsa web -->
+            <a id="igLink" class="contact-item" href="#">
+              <div class="contact-icon-placeholder">
+                <img src="logo_communucation/instegram (1).ico" alt="Instagram" />
+              </div>
+              <span class="contact-text">@batuhanozkan.38</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  </div>
+
+
+  </div>
+  <script src="sidebar.js"></script>
+  <script src="app_bundle.js"></script>
+
 </body>
+
 </html>
