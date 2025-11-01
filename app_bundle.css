@@ -32,6 +32,7 @@
   /* Communication sayfası */
   --comm-card: #141414;
   --comm-ink:  #f0f0f0;
+  --comm-back:rgba(214, 255, 255, 0.232);
 }
 
 .Dark{
@@ -45,6 +46,7 @@
 
   --comm-card: #fffafa;
   --comm-ink:  #000000;
+    --comm-back: #030833a8;
 }
 
 /* ---- GENEL RESET / YAPI ---- */
@@ -397,7 +399,7 @@ img,video,canvas{ max-width:100%; height:auto; display:block; }
   .icerik-kapsayici{ padding-top: calc(var(--sb-closed-h) + var(--gap)); margin-left:0; position:relative; z-index:0; }
   .icerik-alani{
     position:relative; width:94%; max-width:580px; min-height:500px; margin:0 auto 40px;
-    background:#151a2d; color:#fff; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,.3);
+    background:var(--comm-back); color:#fff; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,.3);
     padding:44px; padding-bottom:calc(44px + 80px); text-align:left; z-index:1;
     transform: translateY(var(--box-shift)); transition: transform .35s ease;
   }
